@@ -20,10 +20,12 @@ define('CREDENTIALS_PATH',  __DIR__ .'/nissanform-ed5a14e568ed.json');
     $spreadsheetId = '1CQ7noAv4qW95M918l_3cSFNHjHgqcBcDqsd_T0Qx7uw';
     $range = 'Registros';
     $nombre = $_GET['nombre'];
+    $apellido = $_GET['apellido'];
+    $agencia = $_GET['agencia'];
     $email = $_GET['email'];
     $telefono = $_GET['telefono'];
     $values = [
-        [$nombre,$email,$telefono]
+        [$nombre,$apellido,$email,$telefono,$agencia]
     ];
     $body = new Google_Service_Sheets_ValueRange([
         'values' => $values
