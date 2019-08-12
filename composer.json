@@ -1,0 +1,14 @@
+{
+    "name": "inkuba/phpspreadSheet",
+    "description": "Agregar fila al Spreadsheet con php.",
+    "authors": [
+    {
+     "name": "Jose Luis",
+     "email": "info@example.com"
+    }
+    ],
+   "require": {
+     "asimlqt/php-google-spreadsheet-client": "2.3.*",
+     "google/apiclient": "^2.0"
+   }
+}
