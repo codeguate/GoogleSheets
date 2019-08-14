@@ -1,6 +1,8 @@
 <?php
 use function GuzzleHttp\json_encode;
 header('Access-Control-Allow-Origin: http://octopusmediagroup.celtra.com/*');
+header('Access-Control-Allow-Origin: http://*.celtra.com/*');
+header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 header('content-type: application/json; charset=utf-8');
@@ -19,7 +21,7 @@ define('CREDENTIALS_PATH',  __DIR__ .'/nissanform-ed5a14e568ed.json');
     $client->setAuthConfig(CLIENT_SECRET_PATH);
   
     $service = new Google_Service_Sheets($client);
-    $spreadsheetId = '1CQ7noAv4qW95M918l_3cSFNHjHgqcBcDqsd_T0Qx7uw';
+    $spreadsheetId = $_GET['sheet']?$_GET['sheet']:'1CQ7noAv4qW95M918l_3cSFNHjHgqcBcDqsd_T0Qx7uw';
     $range = 'Registros';
     $nombre = $_GET['nombre'];
     $apellido = $_GET['apellido'];
