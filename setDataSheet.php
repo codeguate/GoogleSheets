@@ -25,6 +25,7 @@ define('CREDENTIALS_PATH',  __DIR__ .'/nissanform-ed5a14e568ed.json');
     $apellido = $_GET['apellido'];
     $agencia = $_GET['agencia'];
     $agenciaN = "";
+    $fecha = date("F j, Y, g:i a");
     $email = $_GET['email'];
     $telefono = $_GET['telefono'];
     switch($agencia){
@@ -62,7 +63,7 @@ define('CREDENTIALS_PATH',  __DIR__ .'/nissanform-ed5a14e568ed.json');
     //     "Teculutan"=>"20"
     // );
     $values = [
-        [$nombre,$apellido,$email,$telefono,$agenciaN]
+        [$nombre,$apellido,$email,$telefono,$agenciaN,$fecha]
     ];
     $body = new Google_Service_Sheets_ValueRange([
         'values' => $values
